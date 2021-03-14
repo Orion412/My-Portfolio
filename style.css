@@ -1,0 +1,144 @@
+/*set background color and sizes for semantic containers*/
+        body, header, footer {
+                background-color: black;
+}
+        main {
+                background-color: lightgrey;
+        /*set font for everything that isnt a title*/
+                font-family: Arial, Helvetica, sans-serif
+}
+        header {
+                margin: 0%;
+                padding: 10px;
+                text-align: left;
+
+}
+
+/*section title settings*/
+        h1 {
+                font-size: 70px;
+                margin: 0%;
+                color: white;
+                font-family: 'Courier New', Courier, monospace
+
+}
+
+        h2 {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 30px;
+}
+
+        h3 { 
+                font-family: 'Courier New', Courier, monospace;
+                color: white;
+                margin: 0%;
+}
+
+/*just save $35*/
+        footer p {
+                font-family:'Courier New', Courier, monospace;
+                font-size: 12px;
+                color: white;
+                text-align: center;
+                margin: 10px;
+                padding: 12px;
+}
+
+/*list settings*/
+        ul, ol {
+        /*ditch the bullets and numbers*/
+                list-style-type: none;
+                margin: 0%;
+                padding: 0px;
+}
+
+    /*unordered list margin*/
+        ul li {
+                margin-bottom: 30px;
+        }
+
+    /*ordered list items display side-by-side*/
+        ol li {
+                display: inline;
+}
+
+/*horizontal rule settings*/
+        hr {
+                margin-top: 50px;
+                margin-bottom: 40px;
+                color: black;
+                background: black;
+                height: 15px;
+}
+
+/*CLASSES*/
+        /*creating a round image*/
+        .image-circle {
+                border-radius: 50%;
+                padding-top: 20px;
+                padding-bottom: 20px;
+}
+
+        /*center content*/
+        .wrapper {
+                width: 500px;
+                margin: auto;
+                padding: auto;
+                text-align: center;
+}
+
+   /*link colors will change when hovered and when visited*/
+        .links {
+                text-decoration: none;
+                color: red;
+}
+        .links:hover {
+                color: gold;
+}
+        .links:visited {
+                color: blue;
+}
+
+/*contact link class settings*/
+   /*button colors will change when hovered and visited*/
+        .btn{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                text-decoration: none;
+                margin: 10px;
+                padding: 10px 8px;
+                border-radius: 6px;
+                border: 1px solid;
+                /*color fades in when cursor hovers buttons*/
+                transition-duration: 0.4s;
+}
+        /*normal state*/
+        .btn-linkedin {
+                color: black;
+                background-color:white;
+                border-color: red;
+}
+        /*hovered state*/
+        .btn-linkedin:hover {
+                background-color: red;
+                color: white;
+}
+
+        .btn-github {
+                color: black;
+                background-color:white;
+                border-color:gold;
+}
+        .btn-github:hover {
+                background-color: gold;
+}
+
+        .btn-gmail {
+                color:black;
+                background-color:white;
+                border-color:blue;
+}
+        .btn-gmail:hover {
+                background-color:blue;
+                color: white;
+}
