@@ -1,144 +1,212 @@
-/*set background color and sizes for semantic containers*/
-        body, header, footer {
-                background-color: black;
-}
-        main {
-                background-color: lightgrey;
-        /*set font for everything that isnt a title*/
-                font-family: Arial, Helvetica, sans-serif
-}
-        header {
-                margin: 0%;
-                padding: 10px;
-                text-align: left;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
+html {
+  display: block;
+  background-color: #0e0b1d;
+  scroll-behavior: smooth;
 }
 
-/*section title settings*/
-        h1 {
-                font-size: 70px;
-                margin: 0%;
-                color: white;
-                font-family: 'Courier New', Courier, monospace
-
+body {
+  margin: 0px;
+  text-align: center;
 }
 
-        h2 {
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 30px;
+section {
+  height: calc(100vh);
 }
 
-        h3 { 
-                font-family: 'Courier New', Courier, monospace;
-                color: white;
-                margin: 0%;
+.flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-/*just save $35*/
-        footer p {
-                font-family:'Courier New', Courier, monospace;
-                font-size: 12px;
-                color: white;
-                text-align: center;
-                margin: 10px;
-                padding: 12px;
+.cycleText {
+  font-weight: lighter;
+  font-size: 45px;
+  font-family: "Space Mono", monospace;
+  color: #c0c0c0;
 }
 
-/*list settings*/
-        ul, ol {
-        /*ditch the bullets and numbers*/
-                list-style-type: none;
-                margin: 0%;
-                padding: 0px;
+.trans {
+  color: #a0cc97;
+  font-family: "Space Mono", monospace;
 }
 
-    /*unordered list margin*/
-        ul li {
-                margin-bottom: 30px;
-        }
-
-    /*ordered list items display side-by-side*/
-        ol li {
-                display: inline;
+.imageBox {
+  width: 100%;
 }
 
-/*horizontal rule settings*/
-        hr {
-                margin-top: 50px;
-                margin-bottom: 40px;
-                color: black;
-                background: black;
-                height: 15px;
+.profile-pic {
+  border-radius: 50%;
 }
 
-/*CLASSES*/
-        /*creating a round image*/
-        .image-circle {
-                border-radius: 50%;
-                padding-top: 20px;
-                padding-bottom: 20px;
+.homeText {
+  font-family: "Space Mono", monospace;
+  font-size: 30px;
+  color: #c0c0c0;
+  padding-bottom: 45px;
 }
 
-        /*center content*/
-        .wrapper {
-                width: 500px;
-                margin: auto;
-                padding: auto;
-                text-align: center;
+nav.container {
+  font-family: "Montserrat", monospace;
+  text-align: center;
+  width: 100%;
+  padding-top: 45px;
 }
 
-   /*link colors will change when hovered and when visited*/
-        .links {
-                text-decoration: none;
-                color: red;
-}
-        .links:hover {
-                color: gold;
-}
-        .links:visited {
-                color: blue;
+nav.container a {
+  align-content: space-between;
+  color: #c0c0c0;
+  text-decoration: none;
+  padding: 0px 10px;
+  position: relative;
+  cursor: pointer;
 }
 
-/*contact link class settings*/
-   /*button colors will change when hovered and visited*/
-        .btn{
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 16px;
-                text-decoration: none;
-                margin: 10px;
-                padding: 10px 8px;
-                border-radius: 6px;
-                border: 1px solid;
-                /*color fades in when cursor hovers buttons*/
-                transition-duration: 0.4s;
+nav.brackets a:before,
+nav.brackets a:after {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  transition: all 0.3s;
 }
-        /*normal state*/
-        .btn-linkedin {
-                color: black;
-                background-color:white;
-                border-color: red;
+nav.brackets a:before {
+  content: "(";
+  left: 0px;
+  transform: translateX(10px);
 }
-        /*hovered state*/
-        .btn-linkedin:hover {
-                background-color: red;
-                color: white;
+nav.brackets a:after {
+  content: ")";
+  right: 0px;
+  transform: translateX(-10px);
 }
-
-        .btn-github {
-                color: black;
-                background-color:white;
-                border-color:gold;
+nav.brackets a:hover:before,
+nav.brackets a:hover:after {
+  opacity: 1;
+  transform: translateX(0px);
 }
-        .btn-github:hover {
-                background-color: gold;
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  background: #2f2561;
+  box-shadow: 0px 10px 10px #000000;
+  margin-bottom: 50px;
 }
 
-        .btn-gmail {
-                color:black;
-                background-color:white;
-                border-color:blue;
+.icon {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-        .btn-gmail:hover {
-                background-color:blue;
-                color: white;
+
+.skillIcon {
+  margin: 20px;
+}
+
+.aboutHead {
+  font-family: "Space Mono", monospace;
+  font-size: 30px;
+  color: #c0c0c0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.aboutText {
+  font-family: "Montserrat", monospace;
+  color: #c0c0c0;
+  font-size: 25px;
+  padding-bottom: 40px
+}
+
+.aboutP {
+  margin: 0px;
+}
+
+.aboutAnchor {
+  text-decoration: none;
+  color: #be70bb;
+}
+.head {
+  font-family: "Space Mono", monospace;
+  font-size: 30px;
+  color: #c0c0c0;
+  padding-bottom: 30px;
+}
+
+.workContainer {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  margin: 20px;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.workAnchor {
+  font-family: "Space Mono", monospace;
+  font-size: 30px;
+  color: #8cc8cf;
+  text-decoration: none;
+}
+
+.gitAnchor {
+  font-family: "Space Mono", monospace;
+  font-size: 30px;
+  color: #8cc8cf;
+  margin: 20px;
+  padding-top: 40px;
+}
+
+.contactForm{
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto 0 auto;
+  min-width: 500px;
+}
+
+input {
+  background: #2f2561;
+  border: 0;
+  box-sizing: border-box;
+  color: #c0c0c0;
+  display: block;
+  font-size: 12pt;
+  margin: 5px;
+  outline: none;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+textarea {
+  background: #2f2561;
+  border: 0;
+  box-sizing: border-box;
+  color: #c0c0c0;
+  display: block;
+  font-size: 12pt;
+  margin: 5px;
+  outline: none;
+  padding: 10px 15px;
+  width: 100%;
+  min-height: 150px;
+}
+
+.button {
+  background: transparent;
+  color: #c0c0c0;
+  cursor: pointer;
+  float: right;
+  font-size: 12pt;
+  margin: 5px 0 0 0;
+  outline: 0;
+  padding: 10px 30px;
 }
